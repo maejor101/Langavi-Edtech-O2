@@ -372,6 +372,12 @@ body {
   margin-block: 25px;
 }
 
+.logoImg{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
 .navbar-item { border-block-end: 1px solid var(--jet); }
 
 .navbar-link {
@@ -968,7 +974,17 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .header-top-list { justify-content: space-between; }
 
-  .logo { font-size: 4.5rem; }
+  .logo { 
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  .logoText{
+    font-size: 2.5rem;
+  }
 
   .logo .span { font-size: 1.4rem; }
 
@@ -1091,10 +1107,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .h2 { --fs-30: 4rem; }
 
-  .section-text {
+  /* .section-text {
     max-width: 50ch;
     margin-inline: auto;
-  }
+  } */
 
 
 
@@ -1225,7 +1241,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
    * SERVICE
    */
 
-  .service .grid-list { grid-template-columns: repeat(3, 1fr); }
+  .service .grid-list { grid-template-columns: repeat(2, 1fr); }
 
 
 
@@ -1286,6 +1302,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     margin-inline: 70px;
   }
 
+
 }
 
 
@@ -1345,11 +1362,6 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   .header-top-item:nth-child(2) { margin-inline-end: auto; }
 
 
-
-  /**
-   * HERO
-   */
-
   .hero {
     background-position: left;
     padding-block-end: 200px;
@@ -1360,42 +1372,58 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 
 
-  /**
-   * PRICING
-   */
+   
 
   .filter-btn { min-width: 178px; }
 
 
 
-  /**
-   * GALLERY
-   */
 
   .gallery .grid-list { grid-template-columns: repeat(4, 1fr); }
 
-
-
-  /**
-   * APPOINTMENT
-   */
 
   .appoin-card .card-content { flex-grow: 1; }
 
 
 
-  /**
-   * FOOTER
-   */
-
   .footer-link-box { grid-template-columns: 0.5fr 0.5fr 1fr 0.8fr; }
 
 
-
-  /**
-   * BACK TO TOP
-   */
-
   .back-top-btn { padding: 15px; }
 
+}
+
+
+@media screen and (max-width:767px) {
+  .service .grid-list { 
+    grid-template-columns: repeat(1, 1fr); 
+  }
+
+ .section-title{
+  font-size: 2.5rem;
+}
+
+
+.hero-title{
+  font-size: 2.2rem;
+}
+
+.logoImg{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+ }
+.logoText{
+  font-size: 2rem;
+}
+
+.logo .span { font-size: 1.4rem; }
+  
 }
